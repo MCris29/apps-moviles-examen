@@ -2,7 +2,7 @@
 
 ## Login
 Inicio de sesión con correo y contraseña
-![image](https://github.com/MCris29/apps-moviles-examen.git/blob/master/images/login.png)
+![image](https://github.com/MCris29/apps-moviles-examen/blob/master/images/login.png)
 
 ## Chats
 Se muestarn los mensajes entre usuarios
