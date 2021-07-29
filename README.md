@@ -2,7 +2,7 @@
 
 ## Login
 
-![image](https://github.com/MCris29/apps-moviles-examen.git/blob/images/login.png)
+![image](https://github.com/MCris29/apps-moviles-examen.git/blob/master/images/login.png)
 
 ## Chats
 
