@@ -2,9 +2,9 @@
 
 ## Login
 
-![image](https://raw.githubusercontent.com/mcris29/ionic-apps-moviles/images/login.png)
+![image](https://github.com/MCris29/apps-moviles-examen.git/blob/images/login.png)
 
-## Mensajes
+## Chats
 
 ![image](https://raw.githubusercontent.com/mcris29/ionic-apps-moviles/images/mapa.png)
 
