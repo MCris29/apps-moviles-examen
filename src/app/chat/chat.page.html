@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Chat </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list class="ios list-ios hydrated">
+    <ion-list-header class="ios hydrated"></ion-list-header>
+
+    <ion-item *ngFor="let booking of Bookings" class="user-list">
+      <ion-label>
+        <strong>{{booking.user}} dice:</strong>
+        <h5>{{booking.message}}</h5>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <form [formGroup]="bookingForm" (ngSubmit)="formSubmit()">
+      <ion-input
+        formControlName="user"
+        placeholder="Escribe tu nombre..."
+      ></ion-input>
+
+      <ion-input
+        formControlName="message"
+        placeholder="Escribe algo..."
+      ></ion-input>
+
+      <ion-button type="submit" color="primary" expand="block">
+        Enviar Mensaje 
+        <ion-icon name="send"></ion-icon>
+      </ion-button>
+
+      <ion-button color="primary" (click)="sendPoint()">
+        Obtener Ubicación 
+        <ion-icon name="pin"></ion-icon>
+      </ion-button>
+
+      <ion-button color="primary">
+        <input type="file" (change)="uploadImage($event.target.files)" />
+        <ion-icon name="image"></ion-icon>
+      </ion-button>
+
+      <!-- File upload progress bar -->
+      <div *ngIf="percentageVal | async as percentage">
+        Progress: {{ percentage | number }}%
+        <ion-progress-bar value="{{ percentage / 100 }}"></ion-progress-bar>
+      </div>
+
+      <div *ngIf="trackSnapshot | async as snap">
+        File size: {{ snap.totalBytes | formatFileSize }} Data transfered: {{
+        snap.bytesTransferred | formatFileSize }}
+      </div>
+    </form>
+  </ion-toolbar>
+</ion-footer>
